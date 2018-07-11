@@ -1,0 +1,9 @@
+artifact_path: model
+flavors:
+  python_function:
+    loader_module: mlflow.tensorflow
+  tensorflow:
+    saved_model_dir: ../models
+    signature_def_key: hello_v1
+run_id: 230c8d4065ad4233bf37ac766c152713
+utc_time_created: '2018-07-11 10:21:53.229386'
