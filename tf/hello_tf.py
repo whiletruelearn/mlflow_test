@@ -19,10 +19,13 @@ saver = tf.train.Saver()
 
 with mlflow.start_run():
     with tf.Session() as sess:
+        mlflow.log_param("alpha", 0.01)
+        mlflow.log_param("l1_ratio", 0.01)
         print(sess.run(hello))
         sess.run(init_op)
         inc_v1.op.run()
         dec_v2.op.run()
         save_path = saver.save(sess,MODEL_PATH )
         print("Model saved in path: %s" % save_path)
+        mlflow.log_metric("rmse", 0.003)
         mlflow.tensorflow.log_saved_model(saved_model_dir=MODEL_DIR, signature_def_key="hello_v1", artifact_path="model")

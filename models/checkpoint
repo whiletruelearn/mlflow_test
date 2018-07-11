@@ -1,2 +1,2 @@
-model_checkpoint_path: "model1.cpkt"
-all_model_checkpoint_paths: "model1.cpkt"
+model_checkpoint_path: "/home/krishna/projects/mlflow_test/tf/../models/model2.cpkt"
+all_model_checkpoint_paths: "/home/krishna/projects/mlflow_test/tf/../models/model2.cpkt"
